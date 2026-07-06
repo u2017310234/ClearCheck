@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 # 2. Configure
 cp .env.example .env
-# Edit .env with your TokenRouter API key
+# Edit .env with your API key
 
 # 3. Run CLI
 python server.py --name "Parsian Bank" --country "Iran"
@@ -40,9 +40,9 @@ User Query → KG Search (ArangoDB) → 3-Layer Risk Rules → LLM Reasoning →
 | File | Purpose |
 |------|---------|
 | `server.py` | FastAPI server + CLI entry point |
-| `triage_engine.py` | 3-layer risk rules + TokenRouter LLM reasoning |
+| `triage_engine.py` | 3-layer risk rules + LLM reasoning |
 | `kg_client.py` | ArangoDB KG client + fallback data |
-| `expert_loop.py` | AgentHansa Expert long-poll worker |
+| `expert_loop.py` | Agent Expert long-poll worker |
 | `skills/` | Skill-as-prompt definitions |
 
 ## Demo Cases
@@ -58,16 +58,9 @@ python server.py --name "Stripe Inc" --country "US"
 python server.py --name "Golden Star Trading" --country "UAE" --amount 200000
 ```
 
-## AgentHansa Deployment
-
-```bash
-# Start the expert loop to receive tasks from the Task Mesh
-python expert_loop.py
-```
 
 ## Built With
 
-- **TokenRouter** — LLM API (Claude via TokenRouter)
+- **LLM** — Large Language Model
 - **ArangoDB** — Entity Knowledge Graph
 - **FastAPI** — API server
-- **AgentHansa** — Agent marketplace deployment
