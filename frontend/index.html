@@ -710,7 +710,7 @@
             </div>
             <div class="status-bar">
                 <div class="status-dot"></div>
-                <span id="statusText">ArangoDB Connected · TokenRouter LLM Ready</span>
+                <span id="statusText">ArangoDB Connected · LLM Ready</span>
             </div>
         </header>
 
@@ -740,8 +740,7 @@
                     UAE</button>
             </div>
             <div class="meta">
-                Powered by <a href="https://api.tokenrouter.com" target="_blank">TokenRouter</a> LLM · ArangoDB
-                Knowledge Graph · Built for <a href="https://agenthansa.com" target="_blank">AgentHansa</a> Hackathon
+                Knowledge Graph · Built for the Future
             </div>
         </div>
     </div>
@@ -991,7 +990,7 @@
         // ── Health check ─────────────────────────────────────────
         fetch('/health').then(r => r.json()).then(d => {
             document.getElementById('statusText').textContent =
-                `ArangoDB ${d.kg === 'connected' ? 'Connected' : 'Fallback'} · TokenRouter LLM Ready`;
+                `ArangoDB ${d.kg === 'connected' ? 'Connected' : 'Fallback'} · LLM Ready`;
         }).catch(() => {
             document.getElementById('statusText').textContent = 'Connecting...';
         });
