@@ -61,6 +61,6 @@ python server.py --name "Golden Star Trading" --country "UAE" --amount 200000
 
 ## Built With
 
-- **LLM** — Large Language Model
+- **LLM** — GMI Cloud Inference Engine
 - **ArangoDB** — Entity Knowledge Graph
 - **FastAPI** — API server
